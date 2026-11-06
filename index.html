@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Cuba — кофейня и завтраки в Новосибирске</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--ff);background:var(--bg);color:var(--fg);line-height:1.6;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+section{padding:96px 0}
+.tag{color:var(--acc);font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase}
+h2{font-family:var(--fd);font-size:clamp(32px,4.4vw,54px);font-weight:var(--hw,600);line-height:1.08;margin:12px 0 14px;letter-spacing:var(--hls,-.02em)}
+.sub{color:var(--mut);max-width:600px;margin-bottom:44px;font-size:17px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.card{position:relative;background:var(--card);border:1px solid var(--line);border-radius:var(--r,20px);padding:28px;transition:.3s}
+.card:hover{transform:translateY(-5px);border-color:var(--acc)}
+.card h3{font-family:var(--fd);font-size:21px;font-weight:600;margin-bottom:8px}
+.card p{color:var(--mut);font-size:15px}
+.stars{color:var(--acc);letter-spacing:3px;margin-bottom:12px}
+.who{margin-top:16px;font-size:13px;color:var(--mut)}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 30px;border-radius:var(--br,99px);font-weight:600;font-size:15px;cursor:pointer;border:0;background:var(--acc);color:var(--onacc,#000);transition:.25s}
+.btn:hover{transform:translateY(-2px);filter:brightness(1.1)}
+.btn.ghost{background:transparent;color:var(--fg);border:1px solid var(--line)}
+.btn.ghost:hover{border-color:var(--acc)}
+.gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:200px;gap:12px}
+.gal img{width:100%;height:100%;object-fit:cover;border-radius:var(--r,16px);transition:.4s}
+.gal img:hover{transform:scale(1.02)}
+.gal .w2{grid-column:span 2}
+.tbl{background:var(--card);border:1px solid var(--line);border-radius:var(--r,20px);overflow:hidden}
+.tr{display:grid;grid-template-columns:2fr 1fr 1fr;padding:20px 28px;border-bottom:1px solid var(--line);align-items:center;color:var(--mut)}
+.tr:last-child{border:0}.tr b{color:var(--fg);font-size:18px;font-weight:600}.tr .pr{color:var(--acc);font-weight:700;font-size:20px}
+.tr.h{font-size:12px;letter-spacing:.15em;text-transform:uppercase;background:rgba(127,127,127,.08)}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.fact{padding:26px 22px;border:1px solid var(--line);border-radius:var(--r,18px);background:var(--card)}
+.fact b{display:block;font-family:var(--fd);font-size:42px;font-weight:600;color:var(--acc);line-height:1.1}.fact span{color:var(--mut);font-size:14px}
+.cont{display:grid;grid-template-columns:.85fr 1.15fr;gap:34px}
+.cl div{padding:18px 0;border-bottom:1px solid var(--line)}
+.cl small{display:block;color:var(--mut);font-size:12px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:4px}
+.cl b{font-size:19px;font-weight:500}
+.map{border-radius:var(--r,20px);overflow:hidden;border:1px solid var(--line);min-height:380px}
+.map iframe{width:100%;height:100%;min-height:380px;border:0}
+footer{border-top:1px solid var(--line);padding:30px 0;color:var(--mut);font-size:14px}
+.fl{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.rise{opacity:0;animation:rise .9s cubic-bezier(.22,1,.36,1) forwards}
+@keyframes rise{from{opacity:0;transform:translateY(24px);filter:blur(6px)}to{opacity:1;transform:none;filter:none}}
+@media(max-width:900px){.grid3,.grid4,.cont,.facts{grid-template-columns:1fr 1fr}.cont{grid-template-columns:1fr}.grid3{grid-template-columns:1fr}.gal{grid-template-columns:1fr 1fr}section{padding:64px 0}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;opacity:1!important;transform:none!important}}
+:root{--bg:#f4ede1;--fg:#2a1d14;--mut:#7a6a5a;--acc:#b8531f;--onacc:#fff;--card:#fbf6ec;--line:#e2d6c2;--ff:Inter,system-ui,sans-serif;--fd:Fraunces,Georgia,serif;--hw:500;--hls:-.03em;--r:26px}
+header{position:sticky;top:0;z-index:50;background:rgba(244,237,225,.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{font-family:var(--fd);font-size:30px;font-weight:600;font-style:italic;color:var(--acc)}
+nav ul{display:flex;gap:30px;list-style:none;font-size:15px}nav a:hover{color:var(--acc)}
+.hero{padding:70px 0 40px}
+.hg{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center}
+.eb{display:inline-block;padding:7px 16px;border-radius:99px;background:#ead9bf;font-size:13px;font-weight:500;color:#6a4a2a}
+h1{font-family:var(--fd);font-size:clamp(48px,7.5vw,100px);line-height:.98;font-weight:500;letter-spacing:-.04em;margin:22px 0}h1 em{color:var(--acc)}
+.lead{font-size:19px;color:var(--mut);max-width:460px}
+.cta{display:flex;gap:14px;margin:32px 0;flex-wrap:wrap}
+.mini{display:flex;gap:34px}.mini b{font-family:var(--fd);font-size:34px;display:block;color:var(--acc)}.mini small{color:var(--mut)}
+.col{position:relative;height:520px}
+.col img{position:absolute;object-fit:cover;border-radius:30px;box-shadow:0 24px 60px rgba(60,35,10,.25);border:6px solid #fbf6ec}
+.col .a{width:58%;height:66%;left:0;top:6%;transform:rotate(-4deg);animation:fl 7s ease-in-out infinite}
+.col .b{width:52%;height:52%;right:0;top:0;transform:rotate(5deg);animation:fl 8s ease-in-out infinite reverse}
+.col .c{width:54%;height:46%;right:6%;bottom:0;transform:rotate(-2deg);animation:fl 9s ease-in-out infinite}
+@keyframes fl{50%{translate:0 -10px}}
+.dish{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.dish .card{text-align:center;padding:30px 20px;background:#fbf6ec}.dish .card h3{font-family:var(--fd);font-size:22px}
+.dish .card:before{content:"";display:block;width:34px;height:3px;background:var(--acc);margin:0 auto 18px;border-radius:3px}
+.fact{background:#fbf6ec}.fact b{font-weight:500}
+.btn{box-shadow:0 10px 24px rgba(184,83,31,.3)}.btn.ghost{box-shadow:none;color:var(--fg)}
+footer{background:#2a1d14;color:#cdbca4;border:0}
+.map iframe{filter:sepia(.3) saturate(.9)!important}
+@media(max-width:900px){nav ul{display:none}.hg{grid-template-columns:1fr}.col{height:420px}.dish{grid-template-columns:1fr 1fr}}
+</style></head><body><header><div class="wrap nav"><a href="#" class="logo">Cuba</a><nav><ul><li><a href="#menu">Меню</a></li><li><a href="#about">О нас</a></li><li><a href="#photos">Фото</a></li><li><a href="#reviews">Отзывы</a></li><li><a href="#contacts">Контакты</a></li></ul></nav><a href="tel:+79612238447" class="btn" style="padding:10px 22px;font-size:14px">Позвонить</a></div></header>
+<div class="hero"><div class="wrap hg"><div><span class="eb rise">Кофейня · Садовая, 20</span>
+<h1 class="rise" style="animation-delay:.12s">Кофе, завтраки<br>и <em>хорошее</em> утро</h1>
+<p class="lead rise" style="animation-delay:.25s">Ароматный кофе, овсяные блины, сырники, рисовая каша с пармезаном и круассаны. Заходи на завтрак или просто за кофе с собой.</p>
+<div class="cta rise" style="animation-delay:.4s"><a href="tel:+79612238447" class="btn">Позвонить в кофейню</a><a href="#menu" class="btn ghost">Что в меню</a></div>
+<div class="mini rise" style="animation-delay:.55s"><div><b>5,0</b><small>рейтинг Яндекс</small></div><div><b>1073</b><small>оценок гостей</small></div><div><b>96%</b><small>хвалят кофе</small></div></div></div>
+<div class="col"><img class="a" src="https://avatars.mds.yandex.net/get-altay/17684794/2a0000019f4fd5c974ed77f6f51ea4278a6f/XXL" alt=""><img class="b" src="https://avatars.mds.yandex.net/get-altay/17743308/2a0000019f4fd5e6949aab01a66e0c114942/XXL" alt=""><img class="c" src="https://avatars.mds.yandex.net/get-altay/18736762/2a0000019f4fd6009919937ab5f2d4a676bd/XXL" alt=""></div></div></div>
+<section id="menu"><div class="wrap"><div class="tag">Меню</div><h2>Что стоит <em style="color:var(--acc)">попробовать</em></h2><p class="sub">Любимые блюда гостей из описания кофейни на Яндекс Картах.</p>
+<div class="dish"><div class="card"><h3>Овсяные блины</h3><p>С вялеными томатами и страчателлой</p></div><div class="card"><h3>Сырники</h3><p>Классический завтрак</p></div><div class="card"><h3>Рисовая каша</h3><p>С пармезаном</p></div><div class="card"><h3>Круассаны</h3><p>100% положительных отзывов</p></div></div></div></section>
+<section id="about" style="padding-top:0"><div class="wrap"><div class="tag">О нас</div><h2>Что говорят <em style="color:var(--acc)">гости</em></h2><p class="sub">Доля положительных отзывов по темам, по данным Яндекс Карт.</p>
+<div class="facts"><div class="fact"><b>96%</b><span>о кофе (264 отзыва)</span></div><div class="fact"><b>95%</b><span>о еде</span></div><div class="fact"><b>95%</b><span>о завтраках</span></div><div class="fact"><b>100%</b><span>о выпечке и круассанах</span></div></div></div></section>
+<section id="photos" style="padding-top:0"><div class="wrap"><div class="tag">Фото</div><h2>Атмосфера <em style="color:var(--acc)">Cuba</em></h2><p class="sub">Реальные фото кофейни.</p><div class="gal"><img src="https://avatars.mds.yandex.net/get-altay/17684794/2a0000019f4fd5c974ed77f6f51ea4278a6f/XXL" alt="Cuba" loading="lazy" class="w2"><img src="https://avatars.mds.yandex.net/get-altay/17743308/2a0000019f4fd5e6949aab01a66e0c114942/XXL" alt="Cuba" loading="lazy"><img src="https://avatars.mds.yandex.net/get-altay/18736762/2a0000019f4fd6009919937ab5f2d4a676bd/XXL" alt="Cuba" loading="lazy"><img src="https://avatars.mds.yandex.net/get-altay/11564583/2a0000018cf7e4526e88f6868c744a009860/XXL" alt="Cuba" loading="lazy"><img src="https://avatars.mds.yandex.net/get-altay/9749133/2a00000188c4597d1bfa772ce00945719feb/XXL" alt="Cuba" loading="lazy"><img src="https://avatars.mds.yandex.net/get-altay/14215987/2a00000192bd0deca9b4a0b85e6259386806/XXL" alt="Cuba" loading="lazy" class="w2"><img src="https://avatars.mds.yandex.net/get-altay/12800836/2a0000018f90f4f5e323e5293693b868ca90/XXL" alt="Cuba" loading="lazy"><img src="https://avatars.mds.yandex.net/get-altay/11522875/2a0000018e15392e52190a72abaffda5bd10/XXL" alt="Cuba" loading="lazy"></div></div></section>
+<section id="reviews" style="padding-top:0"><div class="wrap"><div class="tag">Отзывы</div><h2>Нам <em style="color:var(--acc)">пишут</em></h2><p class="sub">460 отзывов на Яндекс Картах.</p>
+<div class="grid3"><div class="card"><div class="stars">★★★★★</div><p>«Все блюда вкусные, свежеприготовленные, эстетичная подача. Прекрасная команда, заказы исполняются быстро.»</p><div class="who">Светлана Парфенова, Яндекс Карты</div></div><div class="card"><div class="stars">★★★★★</div><p>«Прекрасная кофейня на районе, заходил с девушкой раз 5.»</p><div class="who">Александр Гранкин, Яндекс Карты</div></div><div class="card"><div class="stars">★★★★★</div><p>«По кухне и обслуживанию вопросов нет. Кофе хороший.»</p><div class="who">Shubin Mike, Яндекс Карты</div></div></div></div></section>
+<section id="contacts" style="padding-top:0"><div class="wrap"><div class="tag">Контакты</div><h2>Как нас <em style="color:var(--acc)">найти</em></h2><p class="sub">Цокольный этаж, вход с Садовой улицы.</p><div class="cont"><div class="cl">
+<div><small>Адрес</small><b>Садовая ул., 20, Новосибирск (цокольный этаж)</b></div><div><small>Телефон</small><b><a href="tel:+79612238447">+7 (961) 223-84-47</a></b></div>
+<div style="border:0"><a class="btn" target="_blank" rel="noopener" href="https://yandex.ru/maps/org/cuba/75258159586/">Построить маршрут</a></div></div><div class="map"><iframe src="https://yandex.ru/map-widget/v1/?ol=biz&oid=75258159586&z=17" loading="lazy" title="Карта" style="filter:saturate(.8)"></iframe></div></div></div></section>
+<footer><div class="wrap fl"><span>© 2026 Кофейня Cuba</span><span>Новосибирск · Садовая ул., 20</span></div></footer></body></html>
